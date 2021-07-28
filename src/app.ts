@@ -4,6 +4,11 @@ import cors from "cors";
 import morgan from "morgan";
 
 import Users from "./routes/User.routes";
+import Posts from "./routes/Post.routes";
+import Likes from "./routes/Like.routes";
+import Comments from "./routes/Comment.routes";
+
+import Authentication from "./routes/Authentication.routes";
 
 // configs
 
@@ -16,5 +21,9 @@ app.use(morgan("dev"));
 // routes
 
 app.use(Users);
+app.use(Posts);
+app.use(Likes);
+app.use(Comments);
+app.use(Authentication);
 
 export default app;
